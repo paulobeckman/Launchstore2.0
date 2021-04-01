@@ -12,14 +12,14 @@ module.exports = {
         user.cpf_cpnj = formatCpfCnpj(user.cpf_cnpj)
         user.cep = formatCep(user.cep)
 
-        return res.render('user/index', { user })
+        return res.render('user/index', {user})
     },
     async post(req, res){ 
-        const userId = await User.create(req.body)
+        // const userId = await User.create(req.body)
 
-        req.session.userId = userId
-
-        return res.redirect('/users')
+        // req.session.userId = userId
+        console.log(req.body)
+        return res.send('/users')
     },
     async update(req, res) {
         try{
