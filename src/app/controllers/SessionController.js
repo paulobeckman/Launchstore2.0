@@ -23,7 +23,6 @@ module.exports = {
         const user = req.user
 
         try{
- 
             //um token para esse usuário
             const token = crypto.randomBytes(20).toString("hex")
 
@@ -47,7 +46,7 @@ module.exports = {
                         RECUPERAR SENHA
                     </a>
                 </p>
-                `,
+                `
             })
 
             //avisar o usuário que enviamos o email
